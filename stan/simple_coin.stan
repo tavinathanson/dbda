@@ -6,6 +6,6 @@ parameters {
   real<lower=0,upper=1> theta;
 }
 model {
-  theta ~ beta(400, 400); // Prior on bias is uniform
-  y ~ bernoulli(theta); // Each toss is 
+  theta ~ beta(400, 400); // Prior on bias=theta is fairly centered around 0.5
+  y ~ bernoulli(theta); // Bias=theta percent of tosses are H
 }
